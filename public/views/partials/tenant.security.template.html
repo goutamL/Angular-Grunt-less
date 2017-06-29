@@ -1,0 +1,52 @@
+<div class="row reset-margin reset-padding">
+    <div class="action-btns pull-right">
+        <button class="btn btn-sm"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+        <button class="btn btn-sm btn-green" ng-click="vm.updateTenantAgencyInfo()" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+    </div>
+</div>
+            
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><stong>Security</stong></h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="main-section">
+            <form class="form" name="agencyform" method="PUT">
+
+                <div class="row"><div class="col-md-12"><strong>Session Timeout - eFare/Genfare Link (min)</strong></div></div>
+                <hr class="hr-color" />
+                <div class="row fare-input-num">
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Min</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">Value</div>
+                                <input type="number" class="form-control" id="exampleInputAmount" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="row"><div class="col-md-12"><strong>Dormant account lock threshold (days)</strong></div></div>
+                <hr class="hr-color" />
+                <div class="row fare-input-num">
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Min</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">Value</div>
+                                <input type="number" class="form-control" id="exampleInputAmount" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            
+        </div>
+    </div>
+
+</div>

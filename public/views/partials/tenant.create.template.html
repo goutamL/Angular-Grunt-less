@@ -1,0 +1,136 @@
+<div class="container admin-tc-section" style="margin-top: 50px;">
+    <div class="action-btns pull-right">
+            <button class="btn btn-sm"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+            <button class="btn btn-sm btn-green" ng-click="vm.createTenant()" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+    </div><br /><br />
+
+    <div class="row reset-margin reset-padding">
+        
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><stong>Create Tenant</stong></h3>
+            </div>
+            <div class="panel-body">
+                <form class="form" method="POST">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Name:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="name" ng-model="vm.tenant.name">
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Agency Name:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="agencyName" ng-model="vm.tenant.agencyName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Full Name:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="fullName" ng-model="vm.tenant.fullName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Marketing Message:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="marketingMessage" ng-model="vm.tenant.marketingMessage">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Promotion Code:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="promotionCode" ng-model="vm.tenant.promotionCode">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-xs-12">
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Survey Request:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="surveyRequest" ng-model="vm.tenant.surveyRequest">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                State:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="state" ng-model="vm.tenant.state">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                City:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="city" ng-model="vm.tenant.city">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Street Address:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="streetAddress" ng-model="vm.tenant.streetAddress">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row left-side-form">
+                            <div class="col-md-3">
+                                Zipcode:
+                            </div>
+                            <div class="col-md-9">
+                                <div class="input-group full-block-input">
+                                    <input type="text" class="form-control"  name="zipCode" ng-model="vm.tenant.zipCode">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

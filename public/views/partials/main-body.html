@@ -1,0 +1,153 @@
+<div class="container admin-tc-section" style="margin-top: 50px;">
+<div class="row reset-margin">
+    <div class="tm-section">
+        <div class="tm-search col-md-6 col-xs-8">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search Tenant">
+              <span class="input-group-btn">
+                  <button class="btn" type="button">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+              </span>
+            </div>
+        </div>
+        <div class="tm-actions col-md-6 col-xs-4">
+
+            <div class="pull-right tm-actions-content">
+
+            <!-- <a class="list-icon"><i class="fa fa-plus" aria-hidden="true"></i></a> -->
+            <a class="add-icon" ui-sref=".createtenant"><i class="fa fa-plus" aria-hidden="true"></i> Tenant</a>
+            <a class="list-icon" ng-class="{active: layout == 'list'}" ng-click="layout = 'list'"><i class="fa fa-list-ul" aria-hidden="true"></i></a>
+            <a class="grid-icon" ng-class="{active: layout == 'grid'}" ng-click="layout = 'grid'"> <i class="fa fa-th-large" aria-hidden="true"></i> </a>  
+            
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row reset-margin">
+    <div class="tm-content">
+        <div class="tenant-data-section">
+            <div class="col-md-12">
+
+                <!-- <div ng-show="layout == 'list'" class="list">
+                    <div class="table-section">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                <th>#</th>
+                                  <th>Tenant Name</th>
+                                  <th>Image Source</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="tenant in vm.tenantDoc.tenants">
+                                  <th scope="row">{{$index+1}}</th>
+                                  <td><a href="{{tenant.id}}">{{tenant.id}}</a></td>
+                                  <td><a href="#">{{tenant.images}}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> -->
+                <div ng-show="layout == 'list'" class="list">
+                    <div class="table-section">
+                        <table id="tff" class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                
+                                  <th>Tenant Name</th>
+                                  <th>Full Name</th>
+                                  <th>Agency Name</th>
+                                  <th>City</th>
+                                  <th>Zipcode</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="tenant in vm.allTenants">
+                                  
+                                  <td><a href="/viewTenant/{{tenant.name}}">{{tenant.name}}</a></td>
+                                  <td><a href="#">{{tenant.agencyInformation[0].fullName}}</a></td>
+                                  <td><a href="#">{{tenant.agencyInformation[0].agencyName}}</a></td>
+                                  <td><a href="#">{{tenant.agencyInformation[0].city}}</a></td>
+                                  <td><a href="#">{{tenant.agencyInformation[0].zipCode}}</a></td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div class="grid" ng-show="layout == 'grid'">
+                    <div class="col-md-4 col-sm-6 panel panel-default" ng-repeat="tenant in vm.allTenants">
+                    <div class="panel-body">
+                        <a href="#"><img class="img-responsive" ng-src="{{tenant.images}}"/></a>
+                        <p>{{tenant.name}}</p>
+                        <p>{{tenant.agencyInformation[0].fullName}}</p>            
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Context-menu -->
+ <div class='context-menu'>
+ <ul>
+ <li><span class='Gainsboro'></span>&nbsp;<span>Gainsboro </span></li>
+ <li><span class='Orange'></span>&nbsp;<span>Orange</span></li>
+ <li><span class='Plum'></span>&nbsp;<span>Plum</span></li>
+ </ul>
+ </div>
+
+<input type='hidden' value='' id='txt_id'>
+
+<script>
+  $(document).ready(function(){
+ 
+ // disable right click and show custom context menu
+ $("table").bind('contextmenu', function (e) {
+  var id = this.id;
+  $("#txt_id").val(id);
+ 
+  var top = e.pageY+5;
+  var left = e.pageX;
+
+  // Show contextmenu
+  $(".context-menu").toggle(100).css({
+   top: top + "px",
+   left: left + "px"
+  });
+
+  // disable default context menu
+  return false;
+ });
+
+ // Hide context menu
+ $(document).bind('contextmenu click',function(){
+  $(".context-menu").hide();
+  $("#txt_id").val("");
+ });
+
+ // disable context-menu from custom menu
+ $('.context-menu').bind('contextmenu',function(){
+  return false;
+ });
+ 
+ // Clicked context-menu item
+ $('.context-menu li').click(function(){
+  var className = $(this).find("span:nth-child(1)").attr("class");
+  var titleid = $('#txt_id').val();
+  $( "#"+ titleid ).css( "background-color", className );
+  $(".context-menu").hide();
+ });
+
+});
+  </script>
+

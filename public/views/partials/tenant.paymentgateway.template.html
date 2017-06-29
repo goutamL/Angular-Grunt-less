@@ -1,0 +1,81 @@
+<div class="row reset-margin reset-padding">
+    <div class="action-btns pull-right">
+        <button class="btn btn-sm"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+        <button class="btn btn-sm btn-green" ng-click="vm.updateTenantAgencyInfo()" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+    </div>
+</div>
+            
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><stong>Payment Gateway Options</stong></h3>
+    </div>
+    <div class="panel-body">
+        <!-- <div class="row add-section">
+            <div class="col-md-5 col-xs-8">
+                <div class="input-group full-block-input">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="add-btn col-xs-3">
+                <button class="btn tenant-add-btn"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+            </div>
+        </div> -->
+
+        <div class="row main-section">
+            <form class="form" name="agencyform" method="PUT">
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>Transaction Key</label>
+                        <input type="text" class="form-control" name="agencyName" ng-model="tenantAgencyInfo.agencyName">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>Response Key</label>
+                        <input type="text" class="form-control"  name="fullName" ng-model="tenantAgencyInfo.fullName">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>Login (Xlogin) Hash</label>
+                        <input type="text" class="form-control"  name="streetAddress" ng-model="tenantAgencyInfo.streetAddress">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>Gateway ID</label>
+                        <input type="text" class="form-control"  name="city" ng-model="tenantAgencyInfo.city">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>API Key ID</label>
+                        <input type="text" class="form-control"  name="state" ng-model="tenantAgencyInfo.state">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>API Key</label>
+                        <input type="text" class="form-control"  name="zipCode" ng-model="tenantAgencyInfo.zipCode">
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xs-12">
+                    <div class="input-group full-block-input">
+                        <label>API Password</label>
+                        <input type="text" class="form-control"  name="marketingMessage" ng-model="tenantAgencyInfo.marketingMessage">
+                    </div>
+                </div>
+                
+            </form>
+            
+        </div>
+        <hr class="hr-color" />
+    </div>
+
+</div>

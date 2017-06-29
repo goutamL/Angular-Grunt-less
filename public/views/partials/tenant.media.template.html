@@ -1,0 +1,103 @@
+<div class="row reset-margin reset-padding">
+    <div class="action-btns pull-right">
+        <button class="btn btn-sm"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+        <button class="btn btn-sm btn-green" ng-click="vm.updateTenantMedia()" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+    </div>
+</div>
+            
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><stong>Media</stong></h3>
+    </div>
+    <div class="panel-body">
+        <!-- <div class="row add-section">
+            <div class="col-md-5 col-xs-8">
+                <div class="input-group full-block-input">
+                    <input type="text" class="form-control" placeholder="Name">
+                </div>
+            </div>
+            <div class="add-btn col-xs-3">
+                <button class="btn tenant-add-btn"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+            </div>
+        </div> -->
+
+        <div class="row main-section">
+            <div class="col-md-12 ">
+                <div class="sub-head col-md-8 col-xs-4 reset-margin reset-padding">
+                    <p><strong>Media Type</strong></p>
+                </div>             
+            </div>
+        </div>
+        <hr class="hr-color" />
+
+    <form class="form" name="mediaForm" method="PUT">
+        <div class="row media-section-one">
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">DESFire Card
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">DESFire Sticker
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Magnetic Card
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">LUCC Card
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Printed Bar Code
+                        </label>
+                    </div>
+                </div>
+            </div><!-- main-section-one-->
+            <hr class="hr-color" />
+            <div class="row media-tab-section">
+                <div class="col-md-12">
+                    <div class="col-md-3 reset-margin reset-padding" style="border-right:1px solid silver;">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li ng-class="{ active: vm.isSet(1) }">
+                                <a ui-sref=".desfirecard" ng-click="vm.setTab(1)">DESFire Card</a>
+                            </li>
+                            <li ng-class="{ active: vm.isSet(2) }">
+                                <a ui-sref=".desfiresticker" ng-click="vm.setTab(2)">DESFire Sticker</a>
+                            </li>
+                            <li ng-class="{ active: vm.isSet(3) }">
+                                <a ui-sref=".magneticcard" ng-click="vm.setTab(3)">Magnetic Card</a>
+                            </li>
+                            <li ng-class="{ active: vm.isSet(4) }">
+                                <a ui-sref=".lucccard" ng-click="vm.setTab(4)">LUCC Card</a>
+                            </li>
+                            <li ng-class="{ active: vm.isSet(5) }">
+                                <a ui-sref=".printedbarCode" ng-click="vm.setTab(5)">Printed BarCode</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div ui-view="tab-view"></div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+        
+    </div>
+
+</div>

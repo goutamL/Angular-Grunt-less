@@ -1,0 +1,208 @@
+<div class="row reset-margin reset-padding">
+    <div class="action-btns pull-right">
+        <button class="btn btn-sm"><i class="fa fa-ban" aria-hidden="true"></i> Cancel</button>
+        <button class="btn btn-sm btn-green" ng-click="vm.updateTenantAgencyInfo()" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+    </div>
+</div>
+            
+<div class="panel panel-default" >
+    <div class="panel-heading">
+        <h3 class="panel-title"><stong>Fare Configuration</stong></h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="main-section">
+            <form class="form" name="agencyform" method="PUT">
+
+                <div class="row"><div class="col-md-12"><strong>Rolling Start Period Product Parameters</strong></div></div>
+                <hr class="hr-color" />
+                <div class="row fare-input-num">
+                    <div class="col-md-2">
+                        Max Pending
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Min</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">Value</div>
+                                <input type="number" class="form-control" id="exampleInputAmount" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"><div class="col-md-12"><strong>Fare Codes</strong></div></div>
+                <hr class="hr-color" />
+                <div class="row farecode-checkboxs">
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Full
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Senior
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Youth
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Veteran
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Employersponsored
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Disabled
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 1
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 2
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 4
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 5
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 6
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 7
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Placeholder 8
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Half
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Employee
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Retired Employee
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Driver
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Employee Spouse
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Employee Child
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="">Retired Employee Spouse
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row"><div class="col-md-12"><strong>Employee Transit Program</strong></div></div>
+                <hr class="hr-color" />
+                <div class="row fare-input-num">
+                    <div class="col-md-2">
+                        Organization Id 
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount"></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            
+        </div>
+    </div>
+
+</div>
